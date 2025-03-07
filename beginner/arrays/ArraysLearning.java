@@ -1,6 +1,6 @@
 package beginner.arrays;
 
-public class Arrays {
+public class ArraysLearning {
     public static void main(String[] args) {
         // 1. SINGLE-DIMENSIONAL ARRAYS
         System.out.println("===== SINGLE-DIMENSIONAL ARRAYS =====");
@@ -11,6 +11,11 @@ public class Arrays {
         
         // Initialization of an array
         numbers = new int[5]; // creates array with 5 elements initialized to 0
+        scores = new int[3]; // initialize scores array
+        scores[0] = 85;
+        scores[1] = 90;
+        scores[2] = 95;
+        System.out.println("First score: " + scores[0]); // Using the scores array
         
         // Array initialization with values
         int[] primes = {2, 3, 5, 7, 11}; // Array literal initialization
@@ -61,6 +66,15 @@ public class Arrays {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        // Printing another matrix using the previously unused variable
+        System.out.println("Another matrix contents:");
+        for (int i = 0; i < anotherMatrix.length; i++) {
+            for (int j = 0; j < anotherMatrix[i].length; j++) {
+                System.out.print(anotherMatrix[i][j] + " ");
             }
             System.out.println();
         }

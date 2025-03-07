@@ -1,8 +1,7 @@
 package beginner.arrays;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class ArraysProblem {
     
@@ -211,24 +210,21 @@ public class ArraysProblem {
     /**
      * Problem 8: Find two numbers that add up to a target (Two Sum)
      * Returns indices of the two numbers
-     * Time Complexity: O(n)
-     * Space Complexity: O(n)
+     * Time Complexity: O(n²) - brute force approach
+     * Space Complexity: O(1)
      */
     public static int[] twoSum(int[] arr, int target) {
         if (arr == null || arr.length < 2) {
             throw new IllegalArgumentException("Array is too small");
         }
         
-        Map<Integer, Integer> map = new HashMap<>();
-        
+        // Brute force approach - try all possible pairs
         for (int i = 0; i < arr.length; i++) {
-            int complement = target - arr[i];
-            
-            if (map.containsKey(complement)) {
-                return new int[] {map.get(complement), i};
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
+                    return new int[] {i, j};
+                }
             }
-            
-            map.put(arr[i], i);
         }
         
         throw new IllegalArgumentException("No solution found");

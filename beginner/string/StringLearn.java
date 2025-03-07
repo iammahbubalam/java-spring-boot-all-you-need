@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 // Note: This class should ideally be renamed to StringConcepts or StringExamples 
 // since String is a built-in Java class name
-public class String {
+public class StringLearn {
     
     public static void main(java.lang.String[] args) {
         // =================== 1. STRING CLASS AND ITS METHODS =====================
