@@ -95,6 +95,7 @@ public class Operators {
         
         // Second condition is not evaluated because first is false (short-circuit AND)
         boolean result = (n > 20) && (n++ > 5);  // n++ is not executed
+        System.out.println(result);           // 10 (unchanged)
         System.out.println("After (n > 20) && (n++ > 5), n = " + n);           // 10 (unchanged)
         
         // Second condition is not evaluated because first is true (short-circuit OR)
